@@ -10,7 +10,7 @@ html {height:100%}
 /* NAVIGATION */
 
 .navbar-bg {
-    background: url('../images/space-nav.jpeg');
+    background-color: darkorange;
     background-size: 80%;
 }
 
@@ -24,8 +24,7 @@ html {height:100%}
 }
 
 .nav-profile-img {
-    width: 50px;
-    border: 1px solid #fff;
+    width: 70px;
 }
 
 
@@ -59,8 +58,7 @@ html {height:100%}
 .advertisement-img {
     width: 150px;
     height: auto;
-    border: 2px solid #efefee;
-    border-radius: 5px;
+
 }
 
 .advertisement-text {
