@@ -24,6 +24,7 @@ class LoginAdminController extends AbstractController
         $User->setPassword('admin');
         $User->setFirst('kees');
         $em->persist($User);
+        $User->setRoles(['ROLE_ADMIN']);
         $em->flush();
 
         $User = new User();

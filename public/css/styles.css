@@ -72,16 +72,16 @@ html {height:100%}
     border-top: 5px solid hotpink;
 }
 
-/* ARTICLES */
 
-.main-article {
+
+.main-mondriaan {
     border: 2px solid #efefee;
     Background: #fff;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
-.main-article img {
+.main-mondriaan img {
     width: 100%;
     height: 250px;
     border-top-right-radius: 5px;
@@ -89,48 +89,48 @@ html {height:100%}
     border-top: 5px solid lightblue;
 }
 
-.article-container {
+.mondriaan-container {
     border: 1px solid #efefee;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     background: #fff;
 }
 
-.main-article-link, .article-container a {
+.main-mondriaan-link, .mondriaan-container a {
     text-decoration: none;
     color: #000;
 }
 
-.main-article-link:hover {
+.main-mondriaan-link:hover {
     text-decoration: none;
     color: #000;
 }
 
-.article-title {
+.mondriaan-title {
     min-width: 300px;
 
 }
 
 @media (max-width: 440px) {
-    .article-title {
+    .mondriaan-title {
         min-width: 100px;
         max-width: 245px;
     }
 }
 
-.article-img {
+.mondriaan-img {
     height: 100px;
     width: 100px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.article-author-img {
+.mondriaan-author-img {
     height: 25px;
     border: 1px solid darkgray;
 }
 
-.article-details {
+.mondriaan-details {
     font-size: .8em;
 }
 
@@ -146,54 +146,53 @@ html {height:100%}
     font-size: 1.5em;
 }
 
-.my-article-container {
+.my-mondriaan-container {
     background: #FFBC49;
     border: solid 1px #efefee;
     border-radius: 5px;
 }
 
 
-/* CREATE ARTICLE */
 
-.create-article-container {
+.create-mondriaan-container {
     min-width: 400px;
     background-color: lightblue;
     border-radius: 5px;
 }
 
-/* ARTICLE SHOW PAGE */
 
-.show-article-container {
+
+.show-mondriaan-container {
     width: 100%;
     background-color: #fff;
 }
 
-.show-article-img {
+.show-mondriaan-img {
     width: 250px;
     height: auto;
     border-radius: 5px;
 }
 
-.show-article-title {
+.show-mondriaan-title {
     font-size: 2em;
 }
 
-.like-article, .like-article:hover {
+.like-mondriaan, .like-mondriaan:hover {
     color: red;
     text-decoration: none;
 }
 
 @media (max-width: 991px) {
-    .show-article-title {
+    .show-mondriaan-title {
         font-size: 1.5em;
     }
 
-    .show-article-title-container {
+    .show-mondriaan-title-container {
         max-width: 220px;
     }
 }
 
-.article-text {
+.mondriaan-text {
     margin-top: 20px;
 }
 

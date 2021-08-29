@@ -8,6 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
+use Symfony\Component\Security\Core\Role\SwitchUserRole;
 use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
@@ -17,8 +19,11 @@ use Symfony\Component\Security\Csrf\CsrfTokenManager;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 
+
 class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
+
+
     private $userRepository;
     private $router;
     private $csrfTokenManager;
@@ -54,8 +59,11 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
-        $token = new CsrfToken('authenticate', $credentials['crsf_token']);
-        if(!)
+        $token = new CsrfToken('authenticate', $credentials['csrf_token']);
+        if(!$this->csrfTokenManager->isTokenValid($token))
+        {
+            throw new InvalidCsrfTokenException();
+        }
         return $this->userRepository->findOneBy(['email' => $credentials['email']]);
 
     }
