@@ -126,7 +126,7 @@ class LeerlingAdminController extends AbstractController
         $em->persist($leerlingen);
         $em->flush();
 
-        dump($leerlingen);die;
+        dump($leerlingen);
 
 
         return new Response(sprintf(
