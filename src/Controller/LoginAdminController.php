@@ -36,11 +36,6 @@ class LoginAdminController extends AbstractController
 
 
 
-
-
-
-
-
         return new Response(sprintf(
             'Hiya! new article id: #%d voornaam: %s',
             $User->getId(),
